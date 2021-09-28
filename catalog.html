@@ -5,38 +5,23 @@
     <title>Каталог</title>
   </head>
   <body>
-    <header class="page-header">
+    <header class="header">
       <nav class="navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
-          </li>
-        </ul>
-        <a class="navigation-logo" href="index.html">
+        <a class="navigation-link" href="index.html">Главная</a>
+        <a class="navigation-link" href="#">О Седоне</a>
+        <a class="navigation-link" href="catalog.html">Гостиницы</a>
+        <a class="navigation-link-logo" href="index.html">
           <img class="header-logo" src="" alt="Логотип города Седоны">
         </a>
-
-        <nav class="navigation">
-          <ul class="navigation-list navigation-user">
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visualy-hidden">Поиск</span>
-              </a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visualy-hidden">Избранное</span>
-              </a>
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link" href="#">Хочу сюда</a>
-            </li>
+      </nav>
+      <nav class="navigation navigation-user">
+        <a class="navigation-link" href="#">
+          <span class="visualy-hidden">Поиск</span>
+        </a>
+        <a class="navigation-link" href="#">
+          <span class="visualy-hidden">Избранное</span>
+        </a>
+        <a class="navigation-link" href="#">Хочу сюда</a>
       </nav>
     </header>
 
@@ -59,49 +44,34 @@
         <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visualy-hidden control-input" type="checkbox" name="pool" checked>
-                  <span class="control-label">Бассейн</span>
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visualy-hidden control-input" type="checkbox" name="parking" checked>
-                  <span class="control-label">Парковка</span>
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visualy-hidden control-input" type="checkbox" name="wi-fi">
-                  <span class="control-label">Wi-fi</span>
-                </label>
-              </li>
-            </ul>
+            <label class="control">
+              <input class="visualy-hidden control-input" type="checkbox" name="pool" checked>
+              Бассейн
+            </label>
+            <label class="control">
+              <input class="visualy-hidden control-input" type="checkbox" name="parking" checked>
+              Парковка
+            </label>
+            <label class="control">
+              <input class="visualy-hidden control-input" type="checkbox" name="wi-fi">
+              Wi-fi
+            </label>
           </fieldset>
+
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Тип жилья:</legend>
-            <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visualy-hidden control-input" type="radio" name="house-type" value="hotel" checked>
-                  <span class="control-label">Гостиница</span>
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visualy-hidden control-input" type="radio" name="house-type" value="motel">
-                  <span class="control-label">Мотель</span>
-                </label>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="visualy-hidden control-input" type="radio" name="house-type" value="apartments">
-                  <span class="control-label">Аппартаменты</span>
-                </label>
-              </li>
-            </ul>
+            <label class="control">
+              <input class="visualy-hidden control-input" type="radio" name="house-type" value="hotel" checked>
+              Гостиница
+            </label>
+            <label class="control">
+              <input class="visualy-hidden control-input" type="radio" name="house-type" value="motel">
+              Мотель
+            </label>
+            <label class="control">
+              <input class="visualy-hidden control-input" type="radio" name="house-type" value="apartments">
+              Аппартаменты
+            </label>
           </fieldset>
 
           <fieldset class="catalog-filter-group">
