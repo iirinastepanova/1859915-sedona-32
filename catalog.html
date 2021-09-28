@@ -40,7 +40,7 @@
         </ul>
       </header>
       <section class="catalog-hotels">
-        <h2 class="visualy-hidden">Список гостиниц с фильтрами</h2>
+        <h2 class="visualy-hidden">Фильтры для поиска</h2>
         <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -95,7 +95,7 @@
       </section>
 
       <section class="hotel-searching">
-        <h2 class="visualy-hidden">Поиск гостиницы</h2>
+        <h2 class="visualy-hidden">Результаты поиска</h2>
         <span class="search-title">Найдено гостиниц: 38</span>
         <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="get">
           <label clas="visualy-hidden" for="sorting">Сортировка</label>
@@ -126,7 +126,7 @@
           <span class="hotel-card-type">Гостиница</span>
           <span class="hotel-card-price">От 4000 ₽</span>
           <a class="hotel-card-button button" href="#">Подробнее</a>
-          <a class="button card-button-fav">В избранное</a>
+          <a class="button card-button-fav" href="#">В избранное</a>
           <span class="hotel-card-rating">Рейтинг: 8,5</span>
         </article>
         <article class="hotel-card">
@@ -137,7 +137,7 @@
           <span class="hotel-card-type">Мотель</span>
           <span class="hotel-card-price">От 3000 ₽</span>
           <a class="hotel-card-button button" href="#">Подробнее</a>
-          <a class="button card-button-fav">В избранное</a>
+          <a class="button card-button-fav" href="#">В избранное</a>
           <span class="hotel-card-rating">Рейтинг: 8,9</span>
         </article>
         <article class="hotel-card">
@@ -148,7 +148,7 @@
           <span class="hotel-card-type">Апартаменты</span>
           <span class="hotel-card-price">От 2000 ₽</span>
           <a class="hotel-card-button button" href="#">Подробнее</a>
-          <a class="button card-button-fav">В избранное</a>
+          <a class="button card-button-fav" href="#">В избранное</a>
           <span class="hotel-card-rating">Рейтинг: 9,2</span>
         </article>
         <article class="hotel-card">
@@ -159,7 +159,7 @@
           <span class="hotel-card-type">Гостиница</span>
           <span class="hotel-card-price">От 3000 ₽</span>
           <a class="hotel-card-button button" href="#">Подробнее</a>
-          <a class="button card-button-fav">В избранное</a>
+          <a class="button card-button-fav" href="#">В избранное</a>
           <span class="hotel-card-rating">Рейтинг: 9,2</span>
         </article>
 
@@ -186,26 +186,14 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
-        <form class="number-of-hotels" action="https://echo.htmlacademy.ru/" method="get">
-          <label clas="visualy-hidden" for="number-of-hotels">Количество гостиниц на странице</label>
-          <select class="select-control" id="number-of-hotels" name="number-of-hotels">
+        <form class="hotels-per-page" action="https://echo.htmlacademy.ru/" method="get">
+          <label clas="visualy-hidden" for="hotels-per-page">Количество гостиниц на странице</label>
+          <select class="select-control" id="hotels-per-page" name="hotels-per-page">
             <option value="4">4</option>
             <option value="10">10</option>
             <option value="18">18</option>
           </select>
           <button class="visualy-hidden" type="submit">Показать гостиницы</button>
-        </form>
-      </section>
-
-      <section class="newsletter">
-        <h2 class="">Подпишитесь на рассылку</h2>
-        <p class="">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="newsletter-email">
-            <label class="visualy-hidden" for="newsletter-email">Email</label>
-            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-          </p>
-          <button class="button newsletter-button" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
