@@ -22,6 +22,45 @@ body {
   background-color: #FFFFFF;
 }
 
+.navigation-link.button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #756257;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .header {
 
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+/* Зачем? */
+ /* background-color: #FFFFFF; */
+ text-decoration: none;
+
+}
+
+.title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-description {
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
 }
