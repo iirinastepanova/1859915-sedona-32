@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,19 +10,20 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 body {
-  font-family: "PT Sans" , sans-serif;
+  font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #FFFFFF;
+  margin: 0;
 }
 
-.navigation-link.button {
+.button {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -33,9 +34,11 @@ body {
   text-decoration: none;
 }
 
-.header {
-
+.light-button {
+  background-color: #83B3D3;
+  border-style: none;
 }
+
 
 .navigation-link {
   font-size: 20px;
@@ -46,8 +49,21 @@ body {
 /* Зачем? */
  /* background-color: #FFFFFF; */
  text-decoration: none;
+}
+
+
+.main::before {
+  content: "";
+  display: block;
+  height: 485px;
+  background:
+  url("../img/welcome.svg") no-repeat 50% 50%,
+  url("../img/bg-bottom-border.svg") no-repeat 50% 101%,
+  url("../img/background-index.jpg") no-repeat 50% 50%;
+  background-color: #83b9dd;
 
 }
+
 
 .title {
   font-size: 30px;
@@ -63,4 +79,103 @@ body {
   font-weight: 400;
   text-align: center;
   color: #333333;
+}
+
+.title-light , .text-description-light {
+  color: #FFFFFF;
+}
+
+.advantages-item {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: lightblue; /*Временно*/
+}
+
+.advantages-item:first-child {
+  color: #FFFFFF;
+  background-color: black; /*Для примера*/
+
+}
+
+.advantages-item:nth-child(2) {
+  color: #FFFFFF;
+  background-color: gray; /*Для примера*/
+
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.advantage-number , .advantages-description {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.newsletter-background {
+  background-color: #83b9dd;
+  background-image: url("../img/background-newsletter.jpg");
+  background-repeat: no-repeat;
+  height: 411px;
+}
+
+.social-button {
+  background: none;
+  color: #000000;
+}
+
+.contacts-address-phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: center;
+  color:#000000;
+  text-decoration: none;
+}
+
+
+/*Каталог*/
+
+.inner-header  {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #83b9dd;
+  background-image: url("../img/catalog-background.jpg");
+  background-repeat: no-repeat;
+  height: 500px; /*Временно, верный height: 408px;*/
+}
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: 700;
+  text-transform: uppercase;
+
 }
