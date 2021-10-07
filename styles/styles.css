@@ -34,11 +34,10 @@ body {
   text-decoration: none;
 }
 
-.light-button {
+.button-light {
   background-color: #83B3D3;
   border-style: none;
 }
-
 
 .navigation-link {
   font-size: 20px;
@@ -50,7 +49,6 @@ body {
  /* background-color: #FFFFFF; */
  text-decoration: none;
 }
-
 
 .main::before {
   content: "";
@@ -64,13 +62,13 @@ body {
 
 }
 
-
 .title {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .text-description {
@@ -139,6 +137,12 @@ body {
 
 /*Каталог*/
 
+.main-inner {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
 .inner-header  {
   font-size: 18px;
   line-height: 23px;
@@ -177,5 +181,51 @@ body {
   line-height: 39px;
   font-weight: 700;
   text-transform: uppercase;
+}
 
+.button[type=reset] {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  background-color: inherit;
+  border: none;
+}
+
+.button-view {
+  background-color: #FFFFFF;
+  color: black; /*Временно*/
+}
+
+.hotel-card-link {
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotel-card-rating {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #F2F2F2;
+}
+
+.pagination-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #83B3D3;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #F2F2F2;
 }
