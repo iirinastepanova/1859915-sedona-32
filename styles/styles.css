@@ -14,13 +14,25 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #FFFFFF;
-  margin: 0;
+
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .button {
@@ -39,7 +51,18 @@ body {
   border-style: none;
 }
 
+.header {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-around;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+
+}
+
 .navigation-link {
+  display: block;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -89,15 +112,19 @@ body {
   background-color: lightblue; /*Временно*/
 }
 
+.advantages-nested-list {
+  background-color: rgb(117, 142, 150);
+}
+
 .advantages-item:first-child {
   color: #FFFFFF;
-  background-color: black; /*Для примера*/
+  background-color: lightskyblue; /*Для примера*/
 
 }
 
 .advantages-item:nth-child(2) {
   color: #FFFFFF;
-  background-color: gray; /*Для примера*/
+  background-color: lightsteelblue; /*Для примера*/
 
 }
 
