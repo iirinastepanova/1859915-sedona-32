@@ -14,6 +14,11 @@
   font-display: swap;
 }
 
+* {
+  outline: 2px solid rgba(255, 99, 78, 0.5);
+
+}
+
 html {
   height: 100%;
 }
@@ -26,9 +31,16 @@ body {
   font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
+  text-align: center;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #E5E5E5;
 
+}
+
+.body-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .main-container {
@@ -55,10 +67,29 @@ body {
   display: flex;
   width: 1200px;
   margin: 0 auto;
-  justify-content: space-around;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  justify-content: space-between;
 
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+  margin-left: 71px;
+}
+
+.navigation-user {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: 72px;
+}
+
+.navigation-link-logo {
+  display: block;
+  margin: 0 auto;
 }
 
 .navigation-link {
@@ -68,9 +99,7 @@ body {
   font-weight: 700;
   text-align: center;
   color: #000000;
-/* Зачем? */
- /* background-color: #FFFFFF; */
- text-decoration: none;
+  text-decoration: none;
 }
 
 .main::before {
@@ -79,7 +108,7 @@ body {
   height: 485px;
   background:
   url("../img/welcome.svg") no-repeat 50% 50%,
-  url("../img/bg-bottom-border.svg") no-repeat 50% 101%,
+  url("../img/bg-bottom-border.svg") no-repeat 50% 100%,
   url("../img/background-index.jpg") no-repeat 50% 50%;
   background-color: #83b9dd;
 
@@ -89,7 +118,6 @@ body {
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
-  text-align: center;
   text-transform: uppercase;
   color: #000000;
 }
@@ -98,7 +126,6 @@ body {
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
-  text-align: center;
   color: #333333;
 }
 
@@ -106,8 +133,28 @@ body {
   color: #FFFFFF;
 }
 
+.advantages-list , .advantages-nested-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.advantages-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 400px;
+  margin: auto;
+}
+
 .advantages-item {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
   color: #FFFFFF;
   background-color: lightblue; /*Временно*/
 }
@@ -147,20 +194,37 @@ body {
   height: 411px;
 }
 
+.footer-container {
+  display: flex;
+  margin: 0 auto;
+}
+
+.social {
+  max-width: 130px;
+  margin-right: 38px;;
+}
+
 .social-button {
   background: none;
   color: #000000;
+}
+.contacts {
+  width: 720px;
+  margin: 0 auto;
 }
 
 .contacts-address-phone {
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
-  text-align: center;
   color:#000000;
   text-decoration: none;
 }
 
+.developer-logo {
+  width: 115px;
+  margin-left: auto;
+}
 
 /*Каталог*/
 
