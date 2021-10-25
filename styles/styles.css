@@ -75,10 +75,14 @@ body {
 
 .header {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
   justify-content: space-between;
+}
 
+.header , .footer-container {
+  margin-left: 71px;
+  margin-right: 72px;
 }
 
 .navigation {
@@ -87,7 +91,6 @@ body {
   /*justify-content: space-between;*/
   align-items: center;
   width: 330px;
-  margin-left: 71px; /*Как установить отступ?*/
 }
 
 .navigation-user {
@@ -96,7 +99,6 @@ body {
   /*justify-content: space-between;*/
   max-width: 260px;
   margin-left: auto;
-  margin-right: 72px;
 }
 
 .navigation-link-logo {
@@ -140,8 +142,8 @@ body {
 .title {
   font-size: 30px;
   line-height: 36px;
-  width: 720px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
@@ -151,7 +153,8 @@ body {
   font-size: 22px;
   line-height: 36px;
   width: 720px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 400;
   color: #333333;
 }
@@ -169,12 +172,15 @@ body {
 }
 
 .advantages-wrapper {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  width: 400px;
   margin: auto;
+  */
+  width: 370px;
+  padding: 15px;
+
 }
 
 .advantages-item {
@@ -223,16 +229,27 @@ body {
   font-weight: 400;
 }
 
+.hotel-search {
+  padding: 50px;
+}
+
 .newsletter-background {
   background-color: #83b9dd;
   background-image: url("../img/background-newsletter.jpg");
   background-repeat: no-repeat;
-  height: 411px;
+
 }
 
+.newsletter {
+  padding: 75px;
+}
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+}
 .footer-container {
   display: flex;
-  margin: 40px auto 30px;
+  padding: 25px;
 }
 
 .social {
@@ -282,7 +299,7 @@ body {
 .inner-header  {
   display: flex;
   flex-direction: column;
-  padding-top: 35px;
+  padding: 35px 30px 30px;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -290,7 +307,7 @@ body {
   background-color: #83b9dd;
   background-image: url("../img/catalog-background.jpg");
   background-repeat: no-repeat;
-  height: 408px; /*Временно, верный height: 408px;*/
+
 }
 
 .inner-header-title {
@@ -402,6 +419,7 @@ body {
 
 .pagination-container {
   display: flex;
+  justify-content: space-between;
   margin-top: 31px;
 }
 .pagination {
