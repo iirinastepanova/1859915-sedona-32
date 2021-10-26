@@ -30,10 +30,12 @@
       </header>
 
       <main class="main main-container">
-        <h1 class="visualy-hidden">Добро пожаловать в Седону</h1>
-        <h2 class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p class="text-description"> Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-        </p>
+        <div class="welcome-container">
+          <h1 class="visualy-hidden">Добро пожаловать в Седону</h1>
+          <h2 class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+          <p class="text-description"> Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+          </p>
+        </div>
         <section class="advantages">
           <h2 class="visualy-hidden">Преимущества</h2>
           <ul class="advantages-list">
@@ -109,10 +111,8 @@
           <h2 class="title title-light">Подпишитесь на рассылку</h2>
           <p class="text-description text-description-light">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="newsletter-email">
-              <label class="visualy-hidden" for="newsletter-email">Email</label>
-              <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-            </div>
+            <label class="visualy-hidden" for="newsletter-email">Email</label>
+            <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
             <button class="button button-light" type="submit">Подписаться</button>
           </form>
         </section>
