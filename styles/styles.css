@@ -67,7 +67,10 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-
+.button-large {
+  font-size: 20px;
+  line-height: 26px;
+}
 .button-light {
   background-color: #83B3D3;
   border-style: none;
@@ -190,16 +193,16 @@ body {
 .advantages-item:first-child ,
 .advantages-item:nth-child(2) {
   color: #FFFFFF;
-  background-color: #0e3752;
+  background-color: #83B3D3;
 }
-.advantages-nested-item ,
+.advantages-nested-item,
 .advantages-item {
-  background: rgba(131, 179, 211, 0.12);
+  background: #f0f6fa;
   display: flex;
   flex-wrap: wrap;
   color:black;
 }
-.advantages-nested-item:nth-child(2n) {
+.advantages-nested-item:nth-child(2) {
   background-color: white;
 }
 
@@ -325,7 +328,7 @@ body {
   margin-top: 0;
   margin-bottom: 5px;
 }
-
+/* Хлебные крошки */
 .breadcrumbs {
   display: flex;
   margin: 0;
@@ -376,7 +379,10 @@ body {
   text-transform: uppercase;
   margin-right: auto;
 }
-
+.catalog-filter-group {
+  border: none;
+  text-align: left;
+}
 .sorting-type {
   display: flex;
 }
@@ -396,7 +402,8 @@ body {
   border: none;
 }
 .select-control {
-  width: 287px;
+  box-sizing: border-box;
+  width: 160px;
 }
 .button-view-container {
   display: grid;
@@ -406,7 +413,10 @@ body {
   margin-left: 81px;
 }
 .button-view {
-  background-color: #1538d5; /*Временно*/
+  box-sizing: border-box;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  background-color: #FFFFFF;
   width: 48px;
   height: 48px;
 }
@@ -432,7 +442,7 @@ body {
 
 .hotel-card {
   display: grid;
-  grid-template-columns:180px 1fr auto;
+  grid-template-columns:180px auto 1fr;
   gap: 37px;
   text-align: left;
   padding-top: 30px;
@@ -452,10 +462,11 @@ body {
   column-gap: 8px;
 }
 .hotel-card-rating {
-  align-self: flex-end;
+  justify-self: end;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  min-width: 160px;
   text-align: center;
   text-transform: uppercase;
   color: #333333;
@@ -480,33 +491,42 @@ body {
   grid-row: 2 / 3;
 }
 
+.hotel-card-rating ,
 .hotel-card-button,
 .hotel-card-button-fav {
-  justify-self: start;
   align-self: flex-end;
+  box-sizing: border-box;
+  padding: 8px 30px;
+  border-radius: 4px;
 }
 
 .hotel-card-button {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
+  min-width: 151px;
 }
 .hotel-card-button-fav {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
+  min-width: 160px;
 }
 
 .button-show-all {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  border-top: 1px solid #E6E6E6;
-  border-bottom: 1px solid #E6E6E6;
+  display: block;
+  box-sizing: border-box;
+  width: 625px;
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin: 60px auto;
 }
 
+/* Пагинация */
 .pagination-container {
   display: flex;
   justify-content: space-between;
   margin-top: 31px;
 }
+
 .pagination {
   display: flex;
   margin: 0;
