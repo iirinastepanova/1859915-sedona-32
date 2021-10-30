@@ -25,7 +25,7 @@
             <span class="visualy-hidden">Избранное</span>
             <img src="img/fav-icon.svg" width="18" height="17" alt="">
           </a>
-          <a class="button" href="#">Хочу сюда</a>
+          <a class="button button-want-it" href="#">Хочу сюда</a>
         </nav>
       </header>
 
@@ -114,17 +114,23 @@
             <button class="visualy-hidden" type="submit">Отсортировать жильё</button>
           </form>
           <div class="button-view-container">
-            <a class="button button-view" href="#">
+            <a class="card-grid-toggle" href="#">
               <span class="visualy-hidden">Показать мелкие карточки</span>
-              <img class="button-icon" src="img/mode-tile.svg" width="16" height="14" alt="">
+              <svg class="view-icon" aria-hidden="true" focusable="false" width="16" height="14" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z" fill="#000"/>
+              </svg>
             </a>
-            <a class="button button-view" href="#">
+            <a class="card-grid-toggle" href="#">
               <span class="visualy-hidden">Показать крупные карточки</span>
-              <img class="button-icon" src="img/mode-slideshow.svg" width="16" height="14" alt="">
+              <svg class="view-icon" aria-hidden="true" focusable="false" width="16" height="14" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000"/>
+              </svg>
             </a>
-            <a class="button button-view" href="#">
+            <a class="card-grid-toggle card-grid-toggle-current" href="#">
               <span class="visualy-hidden">Показать список</span>
-              <img class="button-icon" src="img/mode-list.svg" width="16" height="14" alt="">
+              <svg class="view-icon" aria-hidden="true" focusable="false" width="16" height="14" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z" fill="#000"/>
+              </svg>
             </a>
           </div>
         </section>
@@ -240,15 +246,15 @@
         <div class="footer-container">
           <section class="social">
             <h2 class="visualy-hidden">Наши социальные сети</h2>
-            <a class="button social-button" href="https://twitter.com/htmlacademy_ru">
+            <a class="social-button" href="https://twitter.com/htmlacademy_ru">
               <span class="visualy-hidden">Твиттер</span>
               <img class="social-icon " src="img/social-twitter.svg" width="18" height="15" alt="">
             </a>
-            <a class="button social-button" href="https://www.facebook.com/htmlacademy">
+            <a class="social-button" href="https://www.facebook.com/htmlacademy">
               <span class="visualy-hidden">Фэйсбук</span>
               <img class="social-icon" src="img/social-facebook.svg" width="10" height="18" alt="">
             </a>
-            <a class="button social-button" href="https://www.youtube.com/c/HTMLAcademyRUS">
+            <a class="social-button" href="https://www.youtube.com/c/HTMLAcademyRUS">
               <span class="visualy-hidden">Ютуб</span>
               <img class="social-icon" src="img/social-youtube.svg" width="20" height="16" alt="">
             </a>
