@@ -58,6 +58,8 @@ body {
 }
 
 .button {
+  font-family: inherit;
+  box-sizing: border-box; /*?*/
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -66,6 +68,19 @@ body {
   background-color: #756257;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #615048;
+}
+.button:focus {
+  background-color: #615048;
+  border: 3px solid #83B3D3;
+}
+.button:active {
+  border: none;
+  color:rgba(255, 255, 255, 0.3);
 }
 .button-large {
   font-size: 20px;
@@ -75,11 +90,20 @@ body {
   background-color: #83B3D3;
   border-style: none;
 }
-
+.button-light:hover {
+  background-color: #68A2CA;
+}
+.button-light:focus {
+  background-color: #68A2CA;
+  border: 3px solid #756257;
+}
+.button-light:active {
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+}
 .header {
   display: flex;
   margin-top: 0;
-  margin-bottom: 0;
   justify-content: space-between;
 }
 
@@ -91,14 +115,11 @@ body {
 {
   padding-left: 71px;
   padding-right: 72px;
-  /*margin-left: 71px;
-  margin-right: 72px;*/
 }
 
 .navigation {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
   align-items: center;
   width: 330px;
 }
@@ -106,20 +127,21 @@ body {
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
   max-width: 260px;
   margin-left: auto;
 }
 
 .navigation-link-logo {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto -10px;
 }
 
 .navigation-link {
+  position: relative;
   display: block;
-  padding: 20px 5px;
-  margin-right: 23px;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  margin-right: 9px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -127,7 +149,22 @@ body {
   color: #000000;
   text-decoration: none;
 }
+.navigation-link:hover {
+  color: #756257;
+}
+.navigation-link:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+.navigation-link:active {
+  border: none;
+  color: #756257;
+  opacity: 0.3;
+}
 
+.navigation-link:hover .navigation-icon {
+  fill:  #756257;
+}
 .navigation-user .navigation-link {
   min-width: 18px;
   min-height: 18px;
@@ -137,6 +174,27 @@ body {
   margin-right: 0;
 }
 
+.navigation-link:nth-child(1) {
+  padding-left: 0;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.button-want-it{
+  display: block;
+  box-sizing: border-box;
+  width: 160px;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
 .main::before {
   content: "";
   display: block;
@@ -187,9 +245,16 @@ body {
 .advantages-wrapper {
   width: 370px;
   padding: 15px;
+  padding-top: 97px;
 }
 
-/*Цвет для блоков преимуществ*/
+.advantages-nested-item .advantages-wrapper {
+  padding-top: 184px;
+}
+
+
+
+/*Цвет и картинки для блоков преимуществ*/
 .advantages-item:first-child ,
 .advantages-item:nth-child(2) {
   color: #FFFFFF;
@@ -202,9 +267,27 @@ body {
   flex-wrap: wrap;
   color:black;
 }
+.advantages-nested-item:first-child {
+  background-image: url("../img/house-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: top 89px right 162px;
+}
 .advantages-nested-item:nth-child(2) {
   background-color: white;
+  background-image: url("../img/burger-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 74px 70px;
+  background-position: top 91px right 163px;
 }
+
+.advantages-nested-item:nth-child(3) {
+  background-image: url("../img/gift-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 64px 76px;
+  background-position: top 85px right 168px;
+}
+
 
 .advantages-item:nth-child(4) {
   background-color: rgba(131, 179, 211, 0.2);
@@ -216,7 +299,7 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 98px;
+  margin-top: 0;
   margin-bottom: 25px;
 }
 .advantage-number {
@@ -225,10 +308,14 @@ body {
 }
 
 .advantages-description {
+  max-width: 250px;
   margin-top: 0;
-  margin-bottom: 77px;
+  margin-bottom: 62px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.advantage-number , .advantages-description {
+.advantage-number ,
+.advantages-description {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -236,6 +323,19 @@ body {
 
 .hotel-search {
   padding: 50px;
+}
+
+.button-hotel-search {
+  display: block;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 36px;
+  width: 575px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .newsletter-background {
@@ -256,6 +356,25 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.button-subscribe {
+  border-radius: 0px 10px 10px 0px;
+}
+.field[type=email] {
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+}
+.field[type=email]:hover {
+  background-color: #E5E5E5;
+}
+.field[type=email]:focus {
+  border: 3px solid #83B3D3;
+}
+.field[type=email]:active {
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+
+}
 .footer-container {
   display: flex;
   padding-top: 40px;
@@ -265,19 +384,39 @@ body {
 .social {
   display: flex;
   flex-wrap: wrap;
-  max-width: 130px;
+  max-width: 150px;
 
 }
 
 .social-button {
-  padding: 10px;
-  margin-right: 8px;
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
   background: none;
   color: #000000;
+  cursor: pointer;
 }
 
-.social-button:nth-child(4n) {
-  margin-right: 0;
+.social-button:hover .social-icon{
+  fill: #68A2CA;
+}
+.social-button:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+.social-button:active {
+  border: none;
+  opacity: 0.3;
+}
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #DBDBDB;
 }
 
 .contacts {
@@ -293,6 +432,20 @@ body {
   text-decoration: none;
 }
 
+.contacts-address-phone:hover,
+.developer-link:hover {
+  color: #756257;
+}
+.contacts-address-phone:focus,
+.developer-link:focus {
+  border: 3px solid #83B3D3;
+}
+
+.contacts-address-phone:active,
+.developer-link:active{
+  border: none;
+  opacity: 0.3;
+}
 .developer-logo {
   width: 115px;
   margin-left: auto;
@@ -378,6 +531,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin-right: auto;
+  align-self: center;
 }
 .catalog-filter-group {
   border: none;
@@ -412,13 +566,28 @@ body {
   width: 160px;
   margin-left: 81px;
 }
-.button-view {
+
+.card-grid-toggle {
+  position: relative;
   box-sizing: border-box;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   background-color: #FFFFFF;
   width: 48px;
   height: 48px;
+}
+
+.card-grid-toggle-current {
+  border: 2px solid #000000;
+}
+
+.view-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .hotel-cards  {
@@ -541,15 +710,19 @@ body {
 
 .pagination-link {
   display: block;
+  box-sizing: border-box;
   width: 55px;
   height: 55px;
+  padding: 15px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
   color: #FFFFFF;
   background-color: #83B3D3;
+  border-radius: 4px;
 }
 
 .pagination-current {
