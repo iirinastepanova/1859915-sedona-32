@@ -361,10 +361,17 @@ body {
 }
 
 .button-subscribe {
+  padding: 6px 34px;
   border-radius: 0px 10px 10px 0px;
 }
 .field[type=email] {
-  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  box-sizing: border-box;
+  padding-left: 22px;
+  padding-right: 22px;
+  border: 3px solid transparent;
   border-radius: 10px 0px 0px 10px;
 }
 .field[type=email]:hover {
@@ -376,6 +383,7 @@ body {
 .field[type=email]:active {
   background-color: #FFFFFF;
   border: 2px solid #000000;
+  padding: 1px 22px;
 
 }
 .footer-container {
@@ -496,11 +504,13 @@ body {
 }
 
 .breadcrumbs-link {
+  display: block;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
   color: inherit;
   text-decoration: none;
+  margin-bottom: 45px;
 }
 
 /*.filters-container {
@@ -511,11 +521,13 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center; /*Временно*/
+  margin-bottom: 80px;
 }
 
 .catalog-filter-group {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .catalog-filter-title {
@@ -523,8 +535,128 @@ body {
   line-height: 26px;
   font-weight: 700;
   text-align: left;
+  margin-bottom: 30px;
+}
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+.control-mark {
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.control:hover .control-mark {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.control:focus .control-mark {
+  outline: 3px solid #83B3D3;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.control:active .control-mark {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.control-input[type="checkbox"]:checked .control-mark{
+  background-image: url(../img/icon-chek.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+}
+
+.range-scale {
+  position:relative;
+  width: 287px;
+  height: 4px;
+  margin-top: 4px;
+  margin-bottom: 28px;
+  background-color: #FFFFFF;
+  /* opacity: 0.3; */
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #000000;  /* Временно??? */
+  /* opacity: 1; */
+}
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.toggle-min {
+  top: -10px;
+  left: -10px;
+}
+.toggle-max {
+  top: -10px;
+  right: -10px;
+}
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  width: 287px;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+.catalog-filter-input {
+  width:93px;
+  padding-left: 19px;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+  height: 100%;
+}
+.catalog-filter-input:focus-visible {
+  outline: none;
+}
+.catalog-filter-input::-webkit-outer-spin-button,
+.catalog-filter-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
 .hotel-searching {
   display: flex;
   margin-top: 44px;
@@ -552,7 +684,12 @@ body {
   grid-template-rows: repeat(2, auto);
   row-gap: 20px;
 }
-
+.buttons-container .button-light {
+  width: 160px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-radius: 4px;
+}
 .button-reset {
   font-size: inherit;
   line-height: inherit;
@@ -916,5 +1053,225 @@ body {
 
 .fav-item-button-icon {
   fill: #E5E5E5;
+}
+/* Модальное окно */
+.modal-container {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  display: none;
+}
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 54px 70px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;;
+}
+
+.modal-booking {
+  width: 575px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 54px;
+  right: 70px;
+  padding: 0;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color:#F2F2F2;
+  border: none;
+  cursor: pointer;
+  background-image: url(../img/modal-close-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+.modal-close-button:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+.modal-close-button:active {
+  outline: none;
+  opacity: 0.6;
+}
+.modal-title {
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 32px;
+  padding-right: 20px;
+
+}
+
+.modal-booking-form .field ,
+.modal-booking-form .field-group {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal-booking-form .field-group {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 41px;
+  text-align: left;
+
+}
+
+.modal-booking-form .field {
+  width: 420px;
+  box-sizing: border-box;
+  padding: 2px 19px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+}
+
+.field:hover {
+  background-color: #E6E6E6;
+}
+.field:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+.field:active {
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
+}
+.booking-form-label {
+  display: inline-block;
+  width: 155px;
+}
+.field-group .count-input {
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.field-group .data-input {
+  position: relative;
+}
+/* Не работает картинка */
+.field-group .data-input::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon-calendar.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+/* Кнопка + - */
+.count-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 107px;
+  top: 10px;
+  left: 100px;
+}
+.minus-button ,
+.plus-button {
+  opacity: 0.6;
+  width: 25px;
+  height: 25px;
+  padding: 3px;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.minus-button {
+  background-image: url("../img/icon-minus.svg");
+}
+
+.plus-button {
+  background-image: url("../img/icon-plus.svg");
+}
+
+.minus-button:hover ,
+.plus-button:hover {
+  opacity: 1;
+}
+
+.minus-button:focus ,
+.plus-button:focus {
+  opacity: 1;
+  border: 3px solid #83B3D3;
+}
+
+.minus-button:active ,
+.plus-button:active {
+  opacity: 0.6;
+  border: 3px solid transparent;
+}
+
+.count-input::-webkit-outer-spin-button,
+.count-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.booking-form-label[for="booking-kids"] {
+  position: relative;
+  width: 100px;
+  box-sizing: border-box;
+  padding-right: 56px;
+  margin-left: 56px;
+}
+.field-group:last-child {
+  position: relative;
+}
+
+.info-button {
+  position: absolute;
+  top: 7px;
+  left: 110px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+  background-color: #83B3D3;
+  background-image: url(../img/icon-info.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.info-button:hover {
+  background-color: #68A2CA;
+}
+
+.modal-booking-form .field[type=number] {
+  width: 133px;
+}
+.booking-form-people-number {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-booking-form .button {
+  font-size: 20px;
+  line-height: 40px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 20px;
 
 }
