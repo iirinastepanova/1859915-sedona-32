@@ -364,6 +364,10 @@ body {
   padding: 6px 34px;
   border-radius: 0px 10px 10px 0px;
 }
+.without-background .field {
+  background-color: #F2F2F2;
+
+}
 .field[type=email] {
   font-family: inherit;
   font-size: 18px;
@@ -504,6 +508,7 @@ body {
 }
 
 .breadcrumbs-link {
+
   display: block;
   font-size: 16px;
   line-height: 21px;
@@ -511,8 +516,38 @@ body {
   color: inherit;
   text-decoration: none;
   margin-bottom: 45px;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.main-icon {
+  fill: #FFFFFF;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+.breadcrumbs-link:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.breadcrumbs-item:first-child {
+  margin-right: 26px;
+}
+.breadcrumbs-link:nth-child(2) {
+  position: relative;
+}
+
+.breadcrumbs-link:nth-child(2)::after {
+  position: absolute;
+  top: 7px;
+  left: 33px;
+  content: "";
+  display: block;
+  width: 5px;
+  height: 8px;
+  background-image: url(../img/icon-stripe-right.svg);
+  background-repeat: no-repeat;
+}
 /*.filters-container {
   display: flex; Нужна ли?
 }*/
@@ -528,6 +563,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-bottom: 0;
 }
 
 .catalog-filter-title {
@@ -558,7 +594,7 @@ body {
 .control:hover .control-mark {
   background-color: rgba(255, 255, 255, 0.6);
 }
-.control:focus .control-mark {
+.control-input:focus + .control-mark {
   outline: 3px solid #83B3D3;
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -566,10 +602,12 @@ body {
   outline: none;
   background-color: rgba(255, 255, 255, 0.3);
 }
-.control-input[type="checkbox"]:checked .control-mark{
+.control-input[type="checkbox"]:checked + .control-mark{
   background-image: url(../img/icon-chek.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 12px 10px;
+  background-position: top 6px left 4px;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -670,6 +708,41 @@ body {
   text-transform: uppercase;
   margin-right: auto;
   align-self: center;
+}
+.select-control {
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  -webkit-appearance:none;
+  background-size: 12px 7px;
+  background-image: url(../img/icon-stripe-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px top 21px;
+}
+
+.select-control:hover ,
+.select-control:focus ,
+.select-control:focus-visible {
+  outline: none;
+  border: 2px solid #83B3D3;
+}
+
+.select-control:active {
+  border: 2px solid #E6E6E6;
+  opacity: 0.3;
+}
+
+.sorting-type .select-control {
+  padding-left: 19px;
+  padding-right: 19px;
+  width: 287px;
 }
 .catalog-filter-group {
   border: none;
@@ -791,6 +864,7 @@ body {
 }
 
 .hotel-card {
+  position: relative;
   display: grid;
   grid-template-columns:180px auto 1fr;
   gap: 37px;
@@ -870,8 +944,34 @@ body {
 .hotel-card-button-fav-current:active {
   background-color: #6C9E42;
 }
+.hotel-2-stars::after ,
+.hotel-3-stars::after ,
+.hotel-4-stars::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 34px;
+  height: 17px;
+  background-image: url(../img/icon-4-stars.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
 
+.hotel-2-stars::after {
+  width: 43px;
+  right: 58px;
+}
+
+.hotel-3-stars::after{
+  width: 68px;
+  right: 48px;
+}
+.hotel-4-stars::after{
+  width: 93px;
+  right: 35px;
+}
 .button-show-all {
+  position: relative;
   display: block;
   box-sizing: border-box;
   width: 625px;
@@ -880,6 +980,19 @@ body {
   margin: 60px auto;
 }
 
+.button-show-all::before ,
+.button-show-all::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -31px;
+  right: -215px;
+  left: -215px;
+  border: 1px solid #E6E6E6;
+}
+.button-show-all::after {
+  top: 85px;
+}
 /* Пагинация */
 .pagination-container {
   display: flex;
@@ -935,7 +1048,12 @@ body {
   color: rgba(255, 255, 255, 0.3);
   outline: none;
 }
+.hotels-per-page .select-control {
+  width: 160px;
+  padding: 12px 17px 13px;
+  margin-left: 51px;
 
+}
 .popup {
   position: absolute;
   top: 50px;
@@ -1275,3 +1393,4 @@ body {
   padding: 10px 20px;
 
 }
+
