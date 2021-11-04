@@ -189,5 +189,43 @@
         </div>
       </footer>
     </div>
+    <div class="modal-container">
+      <div class="modal modal-booking">
+        <button class="modal-close-button">
+          <span class="visualy-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-booking-form" action="https://echo.htmlacademy.ru/" method="get">
+            <p class="field-group">
+              <label class="booking-form-label" for="booking-arrival-date">Дата заезда:</label>
+              <input class="field data-input" type="text" id="booking-arrival-date" name="booking-arrival-date" placeholder="Укажите дату">
+            </p>
+            <p class="field-group">
+              <label class="booking-form-label" for="booking-departure-date">Дата выезда:</label>
+              <input class="field data-input" type="text" id="booking-departure-date" name="booking-departure-date" placeholder="Укажите дату">
+            </p>
+            <div class="booking-form-people-number">
+              <p class="field-group">
+                <label class="booking-form-label" for="booking-adults">Взрослые:</label>
+                <input class="field count-input" type="number" id="booking-adults" name="number-of-adults">
+                <div class="count-buttons">
+                  <button class="minus-button" type="button"></button>
+                  <button class="plus-button" type="button"></button>
+                </div>
+              </p>
+              <p class="field-group">
+                <label class="booking-form-label" for="booking-kids">Дети:</label>
+                <button class="info-button" type="button">
+                  <span class="visualy-hidden">Узнать дополнительную информацию</span>
+                </button>
+                <input class="field count-input" type="number" id="booking-kids" name="number-of-kids">
+              </p>
+            </div>
+            <button class="button button-light" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
