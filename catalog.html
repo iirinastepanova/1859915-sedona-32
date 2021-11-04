@@ -40,10 +40,14 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
                 <span class="visualy-hidden">Главная</span>
+                <svg class="main-icon" aria-hidden="true" focusable="false" width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4 10h1V7.5h2V10h1V6.5H4V10Z"/>
+                </svg>
               </a>
             </li>
             <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link">Гостиницы</a>
+              <a class="breadcrumbs-link" href="#">Гостиницы</a>
             </li>
           </ul>
 
@@ -156,7 +160,7 @@
         </section>
         <section class="hotel-cards">
           <h2 class="visualy-hidden">Список гостиниц</h2>
-          <article class="hotel-card">
+          <article class="hotel-card hotel-4-stars">
             <a class="hotel-card-image-link" href="#">
               <img class="hotel-card-pic" src="img/hotel-1.jpg" width="180" height="120" alt="">
             </a>
@@ -171,7 +175,7 @@
             </div>
             <span class="hotel-card-rating">Рейтинг: 8,5</span>
           </article>
-          <article class="hotel-card">
+          <article class="hotel-card hotel-3-stars">
             <a class="hotel-card-image-link" href="#">
               <img class="hotel-card-pic" src="img/hotel-2.jpg" width="180" height="120" alt="">
             </a>
@@ -186,7 +190,7 @@
             </div>
             <span class="hotel-card-rating">Рейтинг: 8,9</span>
           </article>
-          <article class="hotel-card">
+          <article class="hotel-card hotel-2-stars">
             <a class="hotel-card-image-link" href="#">
               <img class="hotel-card-pic" src="img/hotel-3.jpg" width="180" height="120" alt="">
             </a>
@@ -201,7 +205,7 @@
             </div>
             <span class="hotel-card-rating">Рейтинг: 9,2</span>
           </article>
-          <article class="hotel-card">
+          <article class="hotel-card hotel-2-stars">
             <a class="hotel-card-image-link" href="#">
               <img class="hotel-card-pic" src="img/hotel-4.jpg" width="180" height="120" alt="">
             </a>
@@ -241,7 +245,7 @@
               </li>
             </ul>
             <form class="hotels-per-page" action="https://echo.htmlacademy.ru/" method="get">
-              <label class="label" for="hotels-per-page">Гостиниц на странице</label>
+              <label class="label" for="hotels-per-page">Гостиниц на странице:</label>
               <select class="select-control" id="hotels-per-page" name="hotels-per-page">
                 <option value="4">4</option>
                 <option value="10">10</option>
@@ -257,10 +261,10 @@
         <section class="newsletter">
           <h2 class="title">Подпишитесь на рассылку</h2>
           <p class="text-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="newsletter-form without-background" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visualy-hidden" for="newsletter-email">Email</label>
             <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-            <button class="button newsletter-button button-light button-large" type="submit">Подписаться</button>
+            <button class="button button-subscribe button-light button-large" type="submit">Подписаться</button>
           </form>
         </section>
         <div class="footer-container">
