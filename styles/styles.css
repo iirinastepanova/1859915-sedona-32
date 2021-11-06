@@ -352,14 +352,14 @@ body {
 /*Оформление текста для блоков преимуществ*/
 .advantages-title {
   margin-top: 0;
-  margin-bottom: 31px;
+  margin-bottom: 28px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
 .advantages-title-nested {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 .advantage-number {
   margin-top: 0;
@@ -369,7 +369,7 @@ body {
 .advantages-description {
   max-width: 250px;
   margin-top: 0;
-  margin-bottom: 62px;
+  margin-bottom: 64px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -382,9 +382,15 @@ body {
 
 .hotel-search {
   padding: 50px;
-  padding-top: 67px;
+  padding-top: 63px;
 }
-
+.hotel-search .title {
+  margin-bottom: 30px;
+}
+.hotel-search .text-description {
+  margin-bottom: 59px;
+  line-height: 26px;
+}
 .button-hotel-search {
   display: block;
   box-sizing: border-box;
@@ -407,6 +413,12 @@ body {
 
 .newsletter {
   padding: 75px;
+  padding-top: 69px;
+  padding-bottom: 94px;
+}
+.newsletter .text-description {
+  margin-bottom: 46px;
+  line-height: 26px;
 }
 .newsletter-form {
   display: flex;
