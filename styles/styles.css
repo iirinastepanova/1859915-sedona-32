@@ -140,6 +140,7 @@ body {
 .navigation-link-logo {
   display: block;
   margin: 0 auto -10px;
+  margin-left: 130px;
 }
 
 .navigation-link {
@@ -147,7 +148,7 @@ body {
   display: block;
   box-sizing: border-box;
   padding: 6px 12px;
-  margin-right: 9px;
+  margin-right: 10px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -163,8 +164,7 @@ body {
 .navigation-link-current .navigation-link-wraper::after {
   content: "";
   position: absolute;
-  top: 43px;
-  left: 0px;
+  top: 46px;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -249,32 +249,34 @@ body {
   display: block;
   height: 485px;
   background:
-  url("../img/welcome.svg") no-repeat 50% 50%,
+  url("../img/welcome.svg") no-repeat top 51px right 372px,
   url("../img/bg-bottom-border.svg") no-repeat 50% 100%,
   url("../img/background-index.jpg") no-repeat 50% 50%;
   background-color: #83b9dd;
 
 }
 .welcome-container {
-  padding: 66px 240px;
+  padding: 39px 240px 58px;
 }
 
 .title {
-  font-size: 30px;
-  line-height: 36px;
+  margin-bottom: 33px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 30px;
+  line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
 }
 
 .text-description {
+  margin: 0 auto 22px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 22px;
   line-height: 36px;
   width: 720px;
-  margin-left: auto;
-  margin-right: auto;
   font-weight: 400;
   color: #333333;
 }
@@ -296,12 +298,17 @@ body {
   padding: 15px;
   padding-top: 97px;
 }
-
-.advantages-nested-item .advantages-wrapper {
-  padding-top: 184px;
+.advantages-wrapper-without-icon {
+  padding-top: 99px;
+  padding-bottom: 44px;
 }
-
-
+.advantages-nested-item .advantages-wrapper {
+  padding-top: 185px;
+  padding-bottom: 28px;
+}
+.advantages-wrapper-without-icon .advantages-title {
+  margin-bottom: 27px;
+}
 
 /*Цвет и картинки для блоков преимуществ*/
 .advantages-item:first-child ,
@@ -344,16 +351,19 @@ body {
 
 /*Оформление текста для блоков преимуществ*/
 .advantages-title {
+  margin-top: 0;
+  margin-bottom: 31px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 25px;
+}
+.advantages-title-nested {
+  margin-bottom: 20px;
 }
 .advantage-number {
   margin-top: 0;
-  margin-bottom: 26px;
+  margin-bottom: 31px;
 }
 
 .advantages-description {
@@ -372,6 +382,7 @@ body {
 
 .hotel-search {
   padding: 50px;
+  padding-top: 67px;
 }
 
 .button-hotel-search {
@@ -1189,7 +1200,6 @@ body {
   background-image: url(../img/icon-angle.svg);
   background-repeat: no-repeat;
   background-position: center;
-
 }
 .popup-content {
   height: 100%;
