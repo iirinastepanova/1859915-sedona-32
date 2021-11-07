@@ -41,6 +41,7 @@
                 <ul class="fav-list">
                   <li class="fav-item">
                     <a class="fav-item-link">
+                      <img class="fav-item-image" src="img/hotel-2-small.png" width="48" height="48" alt="">
                       <p class="fav-item-title">Desert Quail Inn</p>
                       <p class="fav-item-type">Мотель</p>
                     </a>
@@ -54,6 +55,7 @@
                   </li>
                   <li class="fav-item">
                     <a class="fav-item-link">
+                      <img class="fav-item-image" src="img/hotel-3-small.png" width="48" height="48" alt="">
                       <p class="fav-item-title">Villas at Poco Diablo</p>
                       <p class="fav-item-type">Апартаменты</p>
                     </a>
@@ -209,31 +211,35 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-booking-form" action="https://echo.htmlacademy.ru/" method="get">
-            <div class="field-group">
+            <div class="field-group booking-input-error">
               <label class="booking-form-label" for="booking-arrival-date">Дата заезда:</label>
-              <input class="field data-input" type="text" id="booking-arrival-date" name="booking-arrival-date" placeholder="Укажите дату">
+              <input class="field booking-data-input" type="text" id="booking-arrival-date" name="booking-arrival-date" placeholder="Укажите дату" value="27 апреля 2020">
+              <span class="booking-input-success-message">Сообщение об успехе</span>
+              <span class="booking-input-error-message">Мы не можем отправить вас в прошлое.</span>
             </div>
-            <div class="field-group">
+            <div class="field-group booking-input-success">
               <label class="booking-form-label" for="booking-departure-date">Дата выезда:</label>
-              <input class="field data-input" type="text" id="booking-departure-date" name="booking-departure-date" placeholder="Укажите дату">
+              <input class="field booking-data-input" type="text" id="booking-departure-date" name="booking-departure-date" placeholder="Укажите дату" value="1 сентября 2021">
+              <span class="booking-input-success-message">На эти даты есть свободные номера. Пока есть.</span>
+              <span class="booking-input-error-message">Мы не можем отправить вас в прошлое.</span>
             </div>
             <div class="booking-form-people-number">
               <div class="field-group">
                 <label class="booking-form-label" for="booking-adults">Взрослые:</label>
                 <div class="booking-count-buttons">
                   <button class="minus-button" type="button"></button>
-                  <input class="field count-input" type="number" id="booking-adults" name="number-of-adults">
+                  <input class="field booking-count-input" type="number" id="booking-adults" name="number-of-adults">
                   <button class="plus-button" type="button"></button>
                 </div>
               </div>
               <div class="field-group">
                 <label class="booking-form-label" for="booking-kids">Дети:</label>
                 <button class="booking-info-button" type="button">
-                  <span class="visualy-hidden">Узнать дополнительную информацию</span>
+                  <span class="booking-info-button-tip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 </button>
                 <div class="booking-count-buttons">
                   <button class="minus-button" type="button"></button>
-                  <input class="field count-input" type="number" id="booking-kids" name="number-of-kids">
+                  <input class="field booking-count-input" type="number" id="booking-kids" name="number-of-kids">
                   <button class="plus-button" type="button"></button>
                 </div>
               </div>
