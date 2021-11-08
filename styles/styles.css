@@ -235,6 +235,7 @@ body {
 }
 
 .navigation-link-icon {
+  margin-right: 12px;
   padding: 19px;
 }
 
@@ -264,7 +265,7 @@ body {
 }
 
 .button-want-it{
-  margin-left: 13px;
+  margin-left: 11px;
   margin-top: 4px;
   margin-bottom: 4px;
   display: block;
@@ -403,6 +404,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 .advantage-number ,
 .advantages-description {
   font-size: 18px;
@@ -415,13 +417,16 @@ body {
   padding-top: 63px;
   padding-bottom: 91px;
 }
+
 .hotel-search .title {
   margin-bottom: 30px;
 }
+
 .hotel-search .text-description {
   margin-bottom: 59px;
   line-height: 26px;
 }
+
 .button-hotel-search {
   margin-left: auto;
   margin-right: auto;
@@ -453,10 +458,12 @@ body {
 .newsletter .title {
   margin-bottom: 29px;
 }
+
 .newsletter .text-description {
   margin-bottom: 46px;
   line-height: 26px;
 }
+
 .newsletter-form {
   display: flex;
   margin-bottom: 10px;
@@ -470,14 +477,15 @@ body {
   padding: 6px 34px;
   border-radius: 0px 10px 10px 0px;
 }
+
 .without-background .field {
   background-color: #F2F2F2;
-
 }
+
 .field[type=email] {
   width: 600px;
   box-sizing: border-box;
-  padding: 16px 24px;
+  padding: 14px 19px;
   font-family: inherit;
   font-size: 18px;
   line-height: 26px;
@@ -488,15 +496,23 @@ body {
 .field:hover {
   background-color: #E5E5E5;
 }
+
 .field:focus {
   background-color: #E5E5E5;
   outline: 3px solid #83B3D3;
 }
+
 /* Состояние активности */
-.field:not(:placeholder-shown) {
+/* .field:not(:placeholder-shown) {
   background-color: white;
   border: inset 2px #000000;
+} */
+.field:active {
+  background-color: white;
+  border: inset 2px #000000;
+  outline: none;
 }
+
 /* Дополнительное состояние для ошибки */
 .newsletter-form-error > .field {
   border: inset 2px #FF5757;
@@ -558,7 +574,7 @@ body {
 
 .contacts-address-phone {
   display: block;
-  width: 331px;
+  width: 333px;
   margin-bottom: 10px;
   margin-right: auto;
   margin-left: auto;
@@ -862,13 +878,9 @@ body {
 
 .range-wrapper-input:hover {
   border: 2px solid #FFFFFF7E;
+  -moz-appearance: number-input;
 }
 
-.catalog-filter-input:focus .catalog-filter-inpet::before {
-  content: "";
-  outline: 3px solid #83B3D3;
-  box-shadow: inset 0 0 0 3px #83B3D3;
-}
 .range-wrapper-input:active {
   background-color: #756257;
   border: 2px solid #FFFFFF;
@@ -884,9 +896,9 @@ body {
 
 .catalog-filter-label {
   display: inline-block;
-  width: 40px;
+  width: 50px;
   box-sizing: border-box;
-  margin-left: 14px;
+  margin-left: 4px;
   text-align: right;
   color: #FFFFFF7E;
 }
@@ -898,6 +910,7 @@ body {
   color: #FFFFFF;
   background-color: transparent;
   border: none;
+  -moz-appearance:textfield;
 }
 .catalog-filter-input:focus-visible {
   outline: none;
@@ -906,6 +919,8 @@ body {
 .catalog-filter-input::-webkit-inner-spin-button {
   margin: 0;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
 }
 .hotel-searching {
   display: flex;
@@ -1285,7 +1300,9 @@ body {
 }
 
 .hotels-per-page .label {
+  align-self: center;
   max-width: 290px;
+  margin-right: 6px;
 }
 
 .hotels-per-page .select-control {
@@ -1310,7 +1327,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
 }
-
+/* Для открытия попапа */
 .popup-open {
   display: block;
 }
@@ -1322,15 +1339,15 @@ body {
 .popup-fav {
   position: absolute;
   top: 50px;
-  left: -180px;
+  left: -190px;
   width: 400px;
   box-sizing: border-box;
 }
 
 .popup::before {
   position: absolute;
-  top: -14px;
-  left: 178px;
+  top: -15px;
+  left: 186px;
   z-index: 1;
   display: block;
   content: "";
@@ -1362,6 +1379,7 @@ body {
 .fav-item-link {
   position: relative;
   display: block;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -1441,9 +1459,10 @@ body {
 }
 
 .fav-item-link:hover  {
+  outline: none;
   opacity: 0.6;
 }
-/* Не получился фокус */
+
 .fav-item-link:focus {
   outline: 3px solid #83B3D3;
   outline-offset: 7px;
@@ -1451,6 +1470,7 @@ body {
 }
 
 .fav-item-link:active {
+  outline: none;
   opacity: 0.3;
 }
 
@@ -1541,7 +1561,7 @@ body {
   box-sizing: border-box;
   padding: 2px 16px;
   background-color: #F2F2F2;
-  border: 3px solid transparent;
+  border: inset 2px transparent;
   border-radius: 4px;
 }
 .modal-booking-form .field:focus {
@@ -1549,25 +1569,11 @@ body {
   outline: 3px solid #83B3D3;
 }
 
-.field-group .booking-data-input:not(:placeholder-shown) {
-  background-color: #FFFFFF;
-  border: inset 2px #000000;
-}
-
-.field:not(:placeholder-shown) {
-  border: inset 2px #000000;
-  background-color: white;
-}
-
-/* .modal-booking-form .field:active {
-  padding: 3px 17px;
+.modal-booking-form .field:active {
   background-color: #FFFFFF;
   border: 2px solid #000000;
   outline: none;
-} */
-/* .booking-count-input[type="number"]:active {
-  padding: 3px 51px;
-} */
+}
 
 .booking-form-label {
   align-self: center;
@@ -1724,6 +1730,7 @@ body {
 
 .modal-booking-form .field[type=number] {
   width: 133px;
+  -moz-appearance:textfield;
 }
 
 .booking-form-people-number {
