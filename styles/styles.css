@@ -60,7 +60,7 @@ body {
 
 .button {
   box-sizing: border-box;
-  font-family: inherit;
+  font-family: "PT Sans" , Arial, sans-serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -486,7 +486,7 @@ body {
   width: 600px;
   box-sizing: border-box;
   padding: 14px 19px;
-  font-family: inherit;
+  font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 26px;
   border: inset 2px transparent;
@@ -851,7 +851,10 @@ body {
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
 }
 
+/*Поле с ценой  */
+
 .range-wrapper-inputs {
+  position: relative;
   display: flex;
   width: 287px;
   margin-bottom: 28px;
@@ -859,62 +862,69 @@ body {
   border-radius: 4px;
 }
 
-.range-wrapper-input {
-  height: 100%;
-  width: 144px;
-  box-sizing: border-box;
-  padding: 12px 14px 10px 16px;
-  border: 2px solid #FFFFFF;
-}
-
-.range-wrapper-input:first-child {
-  border-radius: 4px 0px 0px 4px;
-}
-
-.range-wrapper-input:last-child {
-  margin-left: -2px;
-  border-radius: 0px 4px 4px 0px;
-}
-
-.range-wrapper-input:hover {
-  border: 2px solid #FFFFFF7E;
-  -moz-appearance: number-input;
-}
-
-.range-wrapper-input:active {
-  background-color: #756257;
-  border: 2px solid #FFFFFF;
-}
-
-.range-wrapper-input:first-child:hover  {
-  z-index: 1;
-}
-/* Не получилась обводка при фокусе
-.catalog-filter-input:focus + .range-wrapper-input  {
-  outline: 6px solid black;
-} */
-
-.catalog-filter-label {
-  display: inline-block;
-  width: 50px;
-  box-sizing: border-box;
-  margin-left: 4px;
-  text-align: right;
-  color: #FFFFFF7E;
-}
 .catalog-filter-input {
-  width: 50px;
-  padding: 0;
+  width: 145px;
+  box-sizing: border-box;
+  padding: 12px 31px 9px 17px;
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
   background-color: transparent;
-  border: none;
+  border: 2px solid #FFFFFF;
   -moz-appearance:textfield;
 }
-.catalog-filter-input:focus-visible {
-  outline: none;
+
+.catalog-filter-input:first-child {
+  border-radius: 4px 0px 0px 4px;
 }
+
+.catalog-filter-input:nth-child(2) {
+  margin-left: -2px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+/* Состояния для полей*/
+.catalog-filter-input:hover {
+  z-index: 1;
+  border: 2px solid #FFFFFF7E;
+  -moz-appearance: number-input;
+}
+.catalog-filter-input:focus {
+  border: 2px solid #FFFFFF;
+  outline: 3px solid #81B3D2;
+  box-shadow: inset 0 0 0 2px #81B3D2;
+  z-index: 2;
+}
+
+.catalog-filter-input:active {
+  background-color: #756257;
+  border: 2px solid #FFFFFF;
+  outline: none;
+  box-shadow: none;
+}
+
+.catalog-filter-input:active ~ .catalog-filter-label {
+  z-index: 2;
+}
+
+.catalog-filter-label {
+  position: absolute;
+  display: block;
+  width: 50px;
+  text-align: right;
+  color: #FFFFFF7E;
+}
+
+.catalog-filter-label[for="min-price"] {
+  top: 9px;
+  left: 70px;
+}
+
+.catalog-filter-label[for="max-price"] {
+  top: 9px;
+  right: 10px;
+}
+
 .catalog-filter-input::-webkit-outer-spin-button,
 .catalog-filter-input::-webkit-inner-spin-button {
   margin: 0;
@@ -922,6 +932,7 @@ body {
   -webkit-appearance: none;
   -moz-appearance: textfield;
 }
+
 .hotel-searching {
   display: flex;
   margin-top: 44px;
@@ -941,7 +952,7 @@ body {
   box-sizing: border-box;
   padding-top: 2px;
   padding-bottom: 2px;
-  font-family: inherit;
+  font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -995,7 +1006,7 @@ body {
   width: 100px;
   box-sizing: border-box;
   padding: 1px 6px 2px;
-  font-family: inherit;
+  font-family: "PT Sans" , Arial, sans-serif;
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
@@ -1320,7 +1331,7 @@ body {
   min-height: 150px;
   box-sizing: border-box;
   padding: 25px;
-  font-family: inherit;
+  font-family: "PT Sans" , Arial, sans-serif;
   color: #000000;
   background-color: #FFFFFF;
   border: 1px solid #E6E6E6;
@@ -1542,7 +1553,7 @@ body {
 
 .modal-booking-form .field ,
 .modal-booking-form .field-group {
-  font-family: inherit;
+  font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
@@ -1775,3 +1786,5 @@ body {
 .booking-input-error .booking-input-error-message {
   color: #FF5757;
 }
+
+
