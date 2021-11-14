@@ -136,6 +136,11 @@ body {
   padding-right: 72px;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .navigation {
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +173,11 @@ body {
   display: block;
   box-sizing: border-box;
   padding: 6px 12px;
-  margin-right: 10px;
+  /* margin-right: 10px; */
+  margin-right: 21px;
+  margin-left: -12px;
+  margin-top: 13px;
+  margin-bottom: 14px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -410,6 +419,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  /* color: #000000; */
+  color: inherit;
 }
 
 .hotel-search {
@@ -639,6 +650,7 @@ body {
   margin-bottom: 3px;
   font-size: 60px;
   line-height: 68px;
+  /* line-height: 78px; line-height по макету рушит внешний вид */
   font-weight: 700;
   text-align: left;
 }
@@ -694,11 +706,6 @@ body {
   height: 8px;
   background-image: url(../img/icon-stripe-right.svg);
   background-repeat: no-repeat;
-}
-.filters-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1057px;
 }
 
 .hotels-filter {
@@ -866,6 +873,7 @@ body {
   width: 145px;
   box-sizing: border-box;
   padding: 12px 31px 9px 17px;
+  font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
@@ -978,9 +986,10 @@ body {
 }
 
 .sorting-type .select-control {
+  align-self: flex-start;
   width: 287px;
-  padding-left: 19px;
-  padding-right: 19px;
+  margin-left: 20px;
+  padding: 12px 19px 13px;
 }
 
 .sorting-type {
@@ -1035,6 +1044,7 @@ body {
 .button-view-container {
   display: grid;
   grid-template-columns: repeat(3, 48px);
+  grid-template-rows: 48px;
   gap: 8px;
   width: 160px;
   margin-left: 81px;
@@ -1119,7 +1129,7 @@ body {
 .hotel-card-pic {
   display: block;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
 }
 .hotel-card-image-link:hover {
@@ -1155,10 +1165,12 @@ body {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   margin-bottom: 32px;
+  color: #333333;
 }
 .hotel-card-price {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  color: #333333;
 }
 
 .hotel-card-rating ,
@@ -1173,12 +1185,12 @@ body {
 .hotel-card-button {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  min-width: 151px;
+  width: 151px;
 }
 .hotel-card-button-fav {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  min-width: 160px;
+  width: 160px;
 }
 
 .hotel-card-button-fav:hover ,
@@ -1264,7 +1276,9 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 55px;
+  /* width: 55px; */
+  min-width: 55px;
+  max-width: 90px;
   height: 55px;
   padding: 12px;
   font-size: 20px;
@@ -1307,7 +1321,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: 500px;
+  width: 510px;
 }
 
 .hotels-per-page .label {
@@ -1339,7 +1353,7 @@ body {
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
 }
 /* Для открытия попапа */
-.popup-open {
+.navigation-popup-wrapper:hover > .popup {
   display: block;
 }
 
@@ -1404,6 +1418,7 @@ body {
   margin-bottom: 0;
   font-size: 18px;
   line-height: 21px;
+  /* line-height: 40px; line-height по макету рушит внешний вид при переполнении */
   font-weight: 700;
   text-align: left;
   color: #000000;
@@ -1414,6 +1429,7 @@ body {
   margin-bottom: 2px;
   font-size: 16px;
   line-height: 21px;
+  /* line-height: 40px; line-height по макету рушит внешний вид при переполнении */
   font-weight: 400;
   text-align: left;
   color: #000000;
@@ -1491,6 +1507,7 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
+  display: flex;
   display: none;
   width: 100%;
   height: 100%;
@@ -1721,13 +1738,14 @@ body {
 
 .booking-info-button:hover > .booking-info-button-tip {
   position: absolute;
-  top: 30px;
+  top: 40px;
+  left: 13px;
   transform: translateX(-50%);
   z-index: 2;
   display: block;
   width: 256px;
   box-sizing: border-box;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 20px 24px 20px;
   font-family: "PT Sans" , Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
