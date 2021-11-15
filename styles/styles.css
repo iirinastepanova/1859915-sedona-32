@@ -1335,7 +1335,7 @@ img {
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
 }
 /* Для открытия попапа */
-.navigation-popup-wrapper:hover > .popup {
+.popup-open {
   display: block;
 }
 
