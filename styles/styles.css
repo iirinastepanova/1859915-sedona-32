@@ -173,10 +173,9 @@ img {
   display: block;
   box-sizing: border-box;
   padding: 6px 12px;
-  /* margin-right: 10px; */
   margin-right: 21px;
   margin-left: -12px;
-  margin-top: 13px;
+  margin-top: 12px;
   margin-bottom: 14px;
   font-size: 20px;
   line-height: 26px;
@@ -227,10 +226,6 @@ img {
 
 .navigation-link:nth-child(3n) {
   margin-right: 0;
-}
-
-.navigation .navigation-link:nth-child(1) {
-  margin-left: -12px;
 }
 
 .navigation-icon {
@@ -296,13 +291,11 @@ img {
 
 }
 .welcome-container {
-  padding: 39px 240px 58px;
+  padding: 39px 240px 57px;
 }
 
 .title {
-  margin-bottom: 33px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 23px auto 33px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -344,7 +337,7 @@ img {
 }
 .advantages-nested-item .advantages-wrapper {
   padding-top: 185px;
-  padding-bottom: 28px;
+  padding-bottom: 26px;
 }
 .advantages-wrapper-without-icon .advantages-title {
   margin-bottom: 27px;
@@ -399,7 +392,7 @@ img {
   text-transform: uppercase;
 }
 .advantages-title-nested {
-  margin-bottom: 17px;
+  margin-bottom: 19px;
 }
 .advantage-number {
   margin-top: 0;
@@ -485,7 +478,7 @@ img {
 
 .button-subscribe {
   min-width: 200px;
-  padding: 6px 34px;
+  padding: 17px 34px;
   border-radius: 0px 10px 10px 0px;
 }
 
@@ -496,7 +489,7 @@ img {
 .field[type=email] {
   width: 600px;
   box-sizing: border-box;
-  padding: 14px 19px;
+  padding: 14px 20px;
   font-family: "PT Sans" , Arial, sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -531,7 +524,7 @@ img {
 
 .footer-container {
   display: flex;
-  padding-top: 40px;
+  padding-top: 39px;
   padding-bottom: 30px;
 }
 
@@ -540,7 +533,7 @@ img {
   flex-wrap: wrap;
   max-width: 150px;
   margin-left: -10px;
-  margin-right: 26px;
+  margin-right: 21px;
 }
 
 .social-button {
@@ -548,7 +541,7 @@ img {
   display: block;
   width: 40px;
   height: 40px;
-  margin-right: 3px;
+  margin-right: 4px;
   color: #000000;
   background: none;
   cursor: pointer;
@@ -619,7 +612,7 @@ img {
 .developer-logo {
   width: 115px;
   margin-left: auto;
-  margin-top: 2px;
+  margin-top: 5px;
 }
 
 /*Каталог*/
@@ -1363,7 +1356,7 @@ img {
 
 .popup-fav {
   position: absolute;
-  top: 50px;
+  top: 62px;
   left: -190px;
   width: 400px;
   box-sizing: border-box;
@@ -1410,7 +1403,7 @@ img {
 
 .fav-item-image {
   float: left;
-  margin-right: 17px;
+  margin-right: 15px;
 }
 
 .fav-item-title {
@@ -1418,7 +1411,6 @@ img {
   margin-bottom: 0;
   font-size: 18px;
   line-height: 21px;
-  /* line-height: 40px; line-height по макету рушит внешний вид при переполнении */
   font-weight: 700;
   text-align: left;
   color: #000000;
